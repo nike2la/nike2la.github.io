@@ -1,9 +1,21 @@
+  <button type="button" id="raz4">домен без поддоменов предшествующей страницы</button>
 <script>
 
-  var a = document.referrer;
-    if (a != '') {
-        alert(a);
+ // var a = document.referrer;
+    //if (a != '') {
+       // alert(a);
       //window.location.replace("http://stackoverflow.com"); // использовать только домен, подробнее про new URL()
+//    }
+
+
+<script>
+document.getElementById('raz4').onclick = function() {
+    var a = document.referrer;
+    if (a != '') {
+      a = new URL(a).hostname.split('.');
+      if (a.length >= 2) alert(a[a.length-2] +'.'+ a[a.length-1]);
     }
+}
+</script>
 </script>
 <p>nnrew 3213 ewqeso 24</p>
